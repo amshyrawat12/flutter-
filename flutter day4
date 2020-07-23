@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+
+myapp() {
+  var mybody = Container(
+    width: 400,
+    height: 550,
+    //color: Colors.red,
+    alignment: Alignment.bottomCenter,
+    child: Text(
+      'PUBG',
+      style: TextStyle(
+        color: Colors.green,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: NetworkImage(
+              'https://user-images.githubusercontent.com/42020368/88300654-5c0a1180-cd21-11ea-9b49-3ad94d293c57.jpg'),
+        ),
+        color: Colors.blue,
+        borderRadius: BorderRadius.circular(20.0),
+        border: Border.all(
+          width: 5,
+          color: Colors.red,
+        )),
+  );
+  var myhome = Scaffold(
+    appBar: AppBar(
+      title: Text('LW'),
+      backgroundColor: Colors.amberAccent,
+    ),
+    body: mybody,
+  );
+
+  return MaterialApp(home: myhome);
+}
